@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/bitsmarter_reusablewidgets.dart';
+import '../bitsmarter_reusablewidgets.dart';
 
 class OurTeamPage extends StatelessWidget {
   @override

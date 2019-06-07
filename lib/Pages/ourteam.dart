@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import '../bitsmarter_reusablewidgets.dart';
+import '../tier2widgets/bs_default_appbar.dart';
+import '../tier2widgets/bs_drawer_builder.dart';
+import './our_team_page_widgets/ot_create_info_card.dart';
+
 
 class OurTeamPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-        appBar: BitSmarter_ReusableWidgets.getAppBar(context),
-        drawer: BitSmarter_ReusableWidgets.getDrawer(context),
+        appBar: DefaultAppbar.getAppBar(context),
+        drawer: BuildDrawer.getDrawer(context),
         body: Container(
           child: ListView(
             children: <Widget>[
@@ -33,16 +36,24 @@ class OurTeamPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.0),
-              BitSmarter_ReusableWidgets().createInfoCard(context, 'images/mapusa.jpg',
+              CreateInfoCard().createInfoCard(
+                  context,
+                  'images/mapusa.jpg',
                   'We use an entirely automatic hiring process to employ people all over the United States.'),
               SizedBox(height: 20.0),
-              BitSmarter_ReusableWidgets().createInfoCard(context, 'images/diverse team.jpg',
+              CreateInfoCard().createInfoCard(
+                  context,
+                  'images/diverse team.jpg',
                   'We hire people from all backgrounds with varying levels of IT knowledge. From students to industry professionals.'),
               SizedBox(height: 20.0),
-              BitSmarter_ReusableWidgets().createInfoCard(context, 'images/catagory.jpg',
+              CreateInfoCard().createInfoCard(
+                  context,
+                  'images/catagory.jpg',
                   'Employees are catagorized by education level, previous experiences and track record with bitSmarter.'),
               SizedBox(height: 20.0),
-              BitSmarter_ReusableWidgets().createInfoCard(context, 'images/data.jpg',
+              CreateInfoCard().createInfoCard(
+                  context,
+                  'images/data.jpg',
                   'We match customers service requests with people capable of solving their problems using algoritims to determine the expected difficulty of each request.'),
             ],
           ),

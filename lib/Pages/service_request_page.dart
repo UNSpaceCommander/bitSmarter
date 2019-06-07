@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import './serviceRequestPage/tier2.dart';
-import './serviceRequestPage/tier1.dart';
-import '../bitsmarter_reusablewidgets.dart';
+import './service_request_page_widgets/sr_get_formated_date.dart';
+import './service_request_page_widgets/sr_get_formated_time.dart';
+import '../tier2widgets/bs_default_appbar.dart';
+import '../tier2widgets/bs_drawer_builder.dart';
 import 'dart:async';
 
 class ServiceRequestPage extends StatefulWidget {
@@ -152,7 +153,7 @@ class _ServiceRequestPage extends State<ServiceRequestPage> {
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  getFormatedDate(_dateTime),
+                  GetFormatedDate.getFormatedDate(_dateTime),
                   style: TextStyle(color: Colors.white),
                 ),
               ],
@@ -201,7 +202,7 @@ class _ServiceRequestPage extends State<ServiceRequestPage> {
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  getFormatedTime(_time),
+                  GetFormatedTime.getFormatedTime(_time),
                   style: TextStyle(color: Colors.white),
                 ),
               ],
@@ -215,8 +216,8 @@ class _ServiceRequestPage extends State<ServiceRequestPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BitSmarter_ReusableWidgets.getAppBar(context),
-      drawer: BitSmarter_ReusableWidgets.getDrawer(context),
+      appBar: DefaultAppbar.getAppBar(context),
+      drawer: BuildDrawer.getDrawer(context),
       body: Container(
         height: MediaQuery.of(context).size.height * 2.0,
         child: ListView(
@@ -263,9 +264,7 @@ class _ServiceRequestPage extends State<ServiceRequestPage> {
                       padding: EdgeInsets.symmetric(horizontal: 5.0),
                       child: Container(
                         child: DropdownButton(
-                          hint: Text(
-                            'Select Catagory'
-                          ),
+                          hint: Text('Select Catagory'),
                           items: <String>['TV', 'Computer', 'Phone', 'Internet']
                               .map((String value) {
                             return new DropdownMenuItem<String>(

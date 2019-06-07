@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../bitsmarter_reusablewidgets.dart';
+import '../tier2widgets/bs_default_appbar.dart';
+import '../tier2widgets/bs_drawer_builder.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -7,8 +8,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: BitSmarter_ReusableWidgets.getDrawer(context),
-      appBar: BitSmarter_ReusableWidgets.getAppBar(context),
+      appBar: DefaultAppbar.getAppBar(context),
+      drawer: BuildDrawer.getDrawer(context),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

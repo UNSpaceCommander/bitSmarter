@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../bitsmarter_reusablewidgets.dart';
+import '../tier2widgets/bs_default_appbar.dart';
+import '../tier2widgets/bs_drawer_builder.dart';
 import '../servicesPage/layouts.dart';
 import '../servicesPage/tier2.dart';
 
@@ -108,8 +109,8 @@ class Services extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: BitSmarter_ReusableWidgets.getAppBar(context),
-      drawer: BitSmarter_ReusableWidgets.getDrawer(context),
+      appBar: DefaultAppbar.getAppBar(context),
+      drawer: BuildDrawer.getDrawer(context),
       body: layoutToDisplay(context)
       //Layouts().layoutToDisplay(context),
     );

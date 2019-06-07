@@ -6,7 +6,7 @@ import './Pages/service_request_page.dart';
 import './Pages/ourteam.dart';
 import './Pages/services.dart';
 import './Pages/stackexample.dart';
-import './Pages/serviceRequestPage/tier1.dart';
+
 
 
 void main() => runApp(MyApp());

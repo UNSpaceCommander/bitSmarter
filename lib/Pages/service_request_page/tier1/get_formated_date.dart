@@ -1,10 +1,7 @@
-import 'package:flutter/material.dart';
-import '../service_request_page.dart';
-import './tier1.dart';
 
-class SRPtier2 {}
 
-String getFormatedDate(DateTime selected) {
+String getFormatedDate(DateTime selected){
+
 
     DateTime tommorrow = DateTime.now();
     Duration oneDay = new Duration(days: 1);
@@ -85,35 +82,3 @@ String getFormatedDate(DateTime selected) {
   }
   return '$weekday $month ${selected.day}, ${selected.year}';
 }
-
-
-String getFormatedTime(TimeOfDay time){
-String temp;
-temp=time.toString();
-int start = temp.indexOf('(');
-start+=1;
-int end = temp.indexOf(')');
-temp = temp.substring(start, end);
-int colon = temp.indexOf(':');
-String hour = temp.substring(0,colon);
-String minute = temp.substring(colon);
-int intHour = int.parse(hour);
-
-String toReturn;
-if(intHour > 12){
-intHour-=12;
-toReturn = intHour.toString()+minute+'PM';
-}
-
-if(intHour<12 && intHour>0){
-toReturn =intHour.toString()+minute+'AM';
-}
-
-if(intHour==0){
-  intHour+=12;
-  toReturn= intHour.toString()+minute+'AM';
-}
-
-  return toReturn;
-}
-

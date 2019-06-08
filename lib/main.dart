@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import './Pages/home.dart';
-import './Pages/search.dart';
-import './Pages/profile.dart';
-import './Pages/service_request_page.dart';
-import './Pages/ourteam.dart';
-import './Pages/services.dart';
-import './Pages/stackexample.dart';
+import './Pages/home_page/home.dart';
+import './Pages/search_page/search.dart';
+import './Pages/profile_page/profile.dart';
+import './Pages/service_request_page/service_request_page.dart';
+import './Pages/our_team_page/ourteam.dart';
+import './Pages/services_page/services.dart';
+
 
 
 

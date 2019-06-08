@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class GetFormatedTime {
-
-static String getFormatedTime(TimeOfDay time){
+String getFormatedTime(TimeOfDay time){
 String temp;
 temp=time.toString();
 int start = temp.indexOf('(');
@@ -30,7 +28,9 @@ if(intHour==0){
   toReturn= intHour.toString()+minute+'AM';
 }
 
+if(toReturn==null) {
+  toReturn='failed to find time';
+}
   return toReturn;
 }
 
-}
